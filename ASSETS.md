@@ -42,10 +42,26 @@ Permitted, with two caveats recorded per asset:
   can use them freely but cannot claim ownership of them. Fine for this project;
   worth knowing.
 
-For consistency, generated sprites should be produced against a fixed
-[Lospec](https://lospec.com) palette, named below once chosen.
+For consistency, generated sprites must match the Kenney pack's palette and tile size.
+Anything that doesn't sit next to the existing art without looking out of place gets
+rejected, regardless of how it was made.
 
-## Where to find assets
+## Primary source
+
+Tessera's art comes from the **[Kenney Roguelike/RPG pack](https://kenney.nl/assets/roguelike-rpg-pack)**,
+released under **CC0**. It covers terrain, characters, monsters and items in one coherent
+style, which is exactly what a tile-grid game needs.
+
+This is the project's primary source. New art should come from this pack where possible,
+and anything added from elsewhere must match its tile size and palette. Mixing packs from
+different artists is the fastest way to make a game look like an asset flip.
+
+- **Tile size:** 16 x 16 px, 1 px spacing, no outer margin. See the tile grid section
+  below. This is binding for all new art.
+- **Palette:** the pack's native palette. New or generated sprites match it rather than an
+  external palette.
+
+## Where to find other assets
 
 | Source | Licence | Notes |
 |---|---|---|
@@ -62,8 +78,23 @@ fastest way to make a game look like an asset flip.
 
 | File / directory | Description | Source | Author | Licence |
 |---|---|---|---|---|
-| _(none yet)_ | | | | |
+| `assets/roguelike-rpg-pack/` | Terrain, characters, monsters, items | [kenney.nl](https://kenney.nl/assets/roguelike-rpg-pack) | Kenney | CC0 |
 
-## Palette
+CC0 requires no attribution. The row is here anyway so provenance stays traceable.
 
-Not yet chosen. Once selected, name it here and treat it as binding for all new art.
+## Tile grid
+
+| | Value |
+|---|---|
+| Tile size | 16 x 16 px |
+| Spacing | 1 px |
+| Margin | 0 px |
+
+These are the values to enter when importing the tileset into Tiled.
+
+Note the terminology mismatch: the pack's `spritesheetInfo.txt` calls the 1px gap a
+"margin", meaning the gap *between* tiles. Tiled calls that **spacing**, and reserves
+**margin** for the border around the outside edge of the sheet — which this pack does not
+have. Entering 1 in Tiled's margin field will misalign the whole grid.
+
+Getting these wrong shows up as thin seams or bleeding edges between tiles.
