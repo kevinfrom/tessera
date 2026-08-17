@@ -78,7 +78,7 @@ fastest way to make a game look like an asset flip.
 
 | File / directory | Description | Source | Author | Licence |
 |---|---|---|---|---|
-| `assets/roguelike-rpg-pack/` | Terrain, characters, monsters, items | [kenney.nl](https://kenney.nl/assets/roguelike-rpg-pack) | Kenney | CC0 |
+| `data/assets/kenney-roguelike-rpg-pack/` | Terrain, characters, monsters, items | [kenney.nl](https://kenney.nl/assets/roguelike-rpg-pack) | Kenney | CC0 |
 
 CC0 requires no attribution. The row is here anyway so provenance stays traceable.
 
